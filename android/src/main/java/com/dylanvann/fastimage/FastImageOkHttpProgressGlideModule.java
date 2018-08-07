@@ -46,7 +46,7 @@ public class FastImageOkHttpProgressGlideModule extends LibraryGlideModule {
                 .getOkHttpClient()
                 .newBuilder()
                 .addInterceptor(createInterceptor(progressListener))
-		.sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
+                .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
                 .hostnameVerifier(SSLSocketClient.getHostnameVerifier())
                 .build();
         OkHttpUrlLoader.Factory factory = new OkHttpUrlLoader.Factory(client);
